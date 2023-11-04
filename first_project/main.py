@@ -1,8 +1,8 @@
 
-a = "Vasyl "
-b = "Dobra"
-c = "Hi, "
+import os
+import openai
 
-d = c + a + b
+# Load your API key from an environment variable or secret management service
+openai.api_key = os.getenv("")
 
-print(d)
+chat_completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Hello world"}])
